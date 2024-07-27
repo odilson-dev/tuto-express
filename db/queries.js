@@ -16,9 +16,12 @@ async function lookForUsernamesWith(string) {
   );
   return rows;
 }
-
+async function deleteAllUsernames() {
+  await pool.query("DELETE FROM usernames");
+}
 module.exports = {
   getAllUsernames,
   insertUsername,
   lookForUsernamesWith,
+  deleteAllUsernames,
 };

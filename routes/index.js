@@ -10,6 +10,7 @@ router.get("/new", async (req, res) => {
     "This route is to display a HTML form to the user with one username input text field. It will submit to the next route"
   );
 });
+router.get("/delete", userController.deleteUsernames);
 
 router.post("/new", async (req, res) => {
   console.log("username to be saved: ", req.body.username);
